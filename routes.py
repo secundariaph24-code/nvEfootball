@@ -9,7 +9,7 @@ from fakepinterest.forms import FormLogin, FormCriarConta
 @app.route("/", methods=["GET", "POST"])
 def homepage():
     formlogin = FormLogin()
-    return render_template("homepage.html", form=formlogin)
+    return render_template("index.html", form=formlogin)
 
 @app.route("/criarconta", methods=["GET", "POST"])
 def criarconta():
@@ -26,3 +26,4 @@ def criarconta():
 @login_required
 def perfil(usuario):
     return render_template("perfil.html", usuario=usuario)
+
